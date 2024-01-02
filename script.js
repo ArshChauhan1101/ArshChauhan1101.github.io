@@ -45,7 +45,6 @@ tabs.forEach((tab) => {
   });
 });
 
-// services box
 const boxViews = document.querySelectorAll(".services-box"),
   boxBtns = document.querySelectorAll(".services-button"),
   boxCloses = document.querySelectorAll(".services-box-close");
@@ -176,5 +175,34 @@ let swiperTestimonial = new Swiper(".testimonial-container", {
     568: {
       slidesPerView: 2,
     },
+  },
+});
+
+// swiper
+let swiperAchievements = new Swiper(".Achievement .swiper-container", {
+  cssMode: true,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".Achievement .swiper-pagination",
+    clickable: true,
+  },
+});
+
+
+// Swiper initialization for Projects section
+let swiperProjects = new Swiper(".portfolio .swiper-container", {
+  cssMode: true,
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".portfolio .swiper-pagination",
+    clickable: true,
   },
 });
