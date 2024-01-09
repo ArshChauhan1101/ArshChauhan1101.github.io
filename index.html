@@ -262,46 +262,7 @@
                 </div>
               </div>
 
-              <!-- qualifi 2 -->
-
-              <!-- <div class="qualification-data">
-                <div></div>
-
-                <div>
-                  <span class="qualification-round"></span>
-                  <span class="qualification-line"></span>
-                </div>
-
-                <div>
-                  <h3 class="qualification-title">
-                    The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert
-                  </h3>
-                  <span class="qualification-subtitle">Udemy</span>
-                  <div class="qualification-date">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    August 2022
-                  </div>
-                </div>
-              </div> -->
-
-              <!-- qualifi 3 -->
-
-              <!-- <div class="qualification-data">
-                <div>
-                  <h3 class="qualification-title"> Complete C# Masterclass</h3>
-                  <span class="qualification-subtitle">Udemy</span>
-                  <div class="qualification-date">
-                    <i class="fa-solid fa-calendar-days"></i>
-                    December 2022
-                  </div>
-                </div>
-                <div>
-                  <span class="qualification-round"></span>
-                  <span class="qualification-line"></span>
-                </div>
-              </div> -->
-
-              <!-- qualifi 4 -->
+              
 
               <div class="qualification-data">
                 <div></div>
@@ -615,11 +576,56 @@
     <a href="#home" class="scrollup" id="scroll-up">
       <i class="fa-solid fa-arrow-up scroll-up-icon"></i>
     </a>
+    <!-- Adding it here-->
+    <section class="chat-bar-collapsible">
+      <button id="chat-button" type="button" class="collapsible">Chat with Arsh!
+          <i id="chat-icon" style="color: #fff;" class="fa-regular fa-comments"></i>
+      </button>
+
+      <div class="content">
+          <div class="full-chat-block">
+              <!-- Message Container -->
+              <div class="outer-container">
+                  <div class="chat-container">
+                      <!-- Messages -->
+                      <div id="chatbox">
+                          <h5 id="chat-timestamp"></h5>
+                          <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                      </div>
+
+                      <!-- User input box -->
+                      <div class="chat-bar-input-block">
+                          <div id="userInput">
+                              <input id="textInput" class="input-box" type="text" name="msg"
+                                  placeholder="Tap 'Enter' to send a message">
+                              <p></p>
+                          </div>
+
+                          <div class="chat-bar-icons">
+                              <i id="chat-icon" style="color: #E54854;" class="fa-solid fa-heart"
+                                  onclick="heartButton()"></i>
+                              <i id="chat-icon" style="color: #acacac;" class="fa-solid fa-paper-plane"
+                                  onclick="sendButton()"></i>
+                          </div>
+                      </div>
+
+                      <div id="chat-bar-bottom">
+                          <p></p>
+                      </div>
+
+                  </div>
+              </div>
+
+          </div>
+      </div>
+
+  </section>
     <script src="Libraries/swiper-bundle.min.js"></script>
     <script
       src="https://kit.fontawesome.com/9b634c15bd.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script.js"></script>
 
 
