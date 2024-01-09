@@ -206,3 +206,305 @@ let swiperProjects = new Swiper(".portfolio .swiper-container", {
     clickable: true,
   },
 });
+
+
+
+// Adding everything for chat box here
+// Selectors
+const heartBtn = document.querySelector(".fa-heart");
+let userText = $("#textInput").val();
+function getBotResponse(input) {
+  //rock paper scissors
+  if (input == "rock") {
+    return "paper";
+  } else if (input == "paper") {
+    return "scissors";
+  } else if (input == "scissors") {
+    return "rock";
+  }
+
+  // Simple Greetings
+  if (
+    input == "Hello" ||
+    input == "Hello!" ||
+    input == "hello" ||
+    input == "hello!" ||
+    input == "Hey" ||
+    input == "Hey!" ||
+    input == "hey" ||
+    input == "hey!" ||
+    input == "Hi" ||
+    input == "Hi!" ||
+    input == "hi" ||
+    input == "hi!" ||
+    input == "Yo!" ||
+    input == "Yo" ||
+    input == "yo!" ||
+    input == "yo" ||
+    input == "Sup" ||
+    input == "Sup!" ||
+    input == "sup" ||
+    input == "sup!" ||
+    input == "Good morning" ||
+    input == "Good morning!" ||
+    input == "good morning" ||
+    input == "good morning!" ||
+    input == "Good day" ||
+    input == "Good day!" ||
+    input == "good day" ||
+    input == "good day!" ||
+    input == "Good evening" ||
+    input == "Good evening!" ||
+    input == "good evening" ||
+    input == "good evening!" ||
+    input == "Good afternoon" ||
+    input == "Good afternoon!" ||
+    input == "good afternoon" ||
+    input == "good afternoon!"
+  ) {
+    return "Hello there!";
+  }
+
+  //   Asking Robot name
+  else if (
+    input == "What's your name?" ||
+    input == "What's your name" ||
+    input == "Whats your name?" ||
+    input == "Whats your name" ||
+    input == "what's your name?" ||
+    input == "what's your name" ||
+    input == "whats your name?" ||
+    input == "whats your name" ||
+    input == "who are you?" ||
+    input == "Who are you?" ||
+    input == "Who are you" ||
+    input == "who are you" ||
+    input == "What is your name" ||
+    input == "What is your name?" ||
+    input == "what is your name" ||
+    input == "what is your name?" ||
+    input == "your name" ||
+    input == "Your name"
+  ) {
+    return "My name is Arsh.";
+  }
+
+  //   Health questions
+  else if (
+    input == "How are you?" ||
+    input == "how are you?" ||
+    input == "How are you" ||
+    input == "how are you" ||
+    input == "How are you felling?" ||
+    input == "How are you felling" ||
+    input == "how are you felling?" ||
+    input == "how are you felling"
+  ) {
+    return "I'm fine. Thanks for asking";
+  }
+  // EVE: Joke
+  else if (
+    input == "Tell me a joke" ||
+    input == "tell me a joke" ||
+    input == "Say a joke" ||
+    input == "say a joke"
+  ) {
+    return "You, you're the joke 🤡";
+  }
+
+  // Simple Valediction
+  else if (
+    input == "Goodbye" ||
+    input == "goodbye" ||
+    input == "Goodbye!" ||
+    input == "goodbye!" ||
+    input == "goodbye" ||
+    input == "Good bye" ||
+    input == "Good bye!" ||
+    input == "good bye" ||
+    input == "good bye!" ||
+    input == "Bye" ||
+    input == "Bye!" ||
+    input == "bye" ||
+    input == "bye!" ||
+    input == "Take care" ||
+    input == "Take care!" ||
+    input == "take care" ||
+    input == "take care!" ||
+    input == "Peace" ||
+    input == "Peace!" ||
+    input == "peace" ||
+    input == "peace!" ||
+    input == "Peace out!" ||
+    input == "Peace out" ||
+    input == "peace out" ||
+    input == "peace out!" ||
+    input == "Later" ||
+    input == "later" ||
+    input == "Catch you later" ||
+    input == "catch you later" ||
+    input == "I'm out" ||
+    input == "Im out" ||
+    input == "Good night!" ||
+    input == "Good night" ||
+    input == "good night" ||
+    input == "good night!" ||
+    input == "be right back" ||
+    input == "brb"
+  ) {
+    return "Talk to you later!";
+  } // Curse Words
+  else if (
+    input == "Fuck" ||
+    input == "fuck" ||
+    input == "fuck you" ||
+    input == "Fuck you" ||
+    input == "Fuck off" ||
+    input == "fuck off" ||
+    input == "Piss of" ||
+    input == "piss of" ||
+    input == "Bastard" ||
+    input == "bastard" ||
+    input == "Bitch" ||
+    input == "bitch" ||
+    input == "Bloody hell" ||
+    input == "bloody hell" ||
+    input == "Slut" ||
+    input == "slut" ||
+    input == "Whore" ||
+    input == "whore" ||
+    input == "Hoe" ||
+    input == "hoe"
+  ) {
+    return "That's not nice to say.";
+  }
+  // Favorite clor
+  else if (
+    input == "What is your favorite color?" ||
+    input == "what is your favorite color?" ||
+    input == "What is your favorite color" ||
+    input == "what is your favorite color" ||
+    input == "What's your favorite color?" ||
+    input == "what's your favorite color?" ||
+    input == "What's your favorite color" ||
+    input == "what's your favorite color" ||
+    input == "Whats your favorite color?" ||
+    input == "whats your favorite color?" ||
+    input == "Whats your favorite color" ||
+    input == "whats your favorite color"
+  ) {
+    return "My favorite color is blue.";
+  }
+  // Irrelevant
+  else {
+    return "Try asking something else!";
+  }
+}
+
+
+// Collapsible
+let coll = document.getElementsByClassName("collapsible");
+
+for (let i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function () {
+    this.classList.toggle("active");
+
+    let content = this.nextElementSibling;
+
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+
+// Get Time
+function getTime() {
+  let today = new Date();
+  hours = today.getHours();
+  minutes = today.getMinutes();
+
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+
+  let time = hours + ":" + minutes;
+  return time;
+}
+
+// Gets the first message
+function firstBotMessage() {
+  let firstMessage = "Hello There! I am Arsh's Chat bot. Is there anything i can assist you with?";
+  document.getElementById("botStarterMessage").innerHTML =
+    '<p class="botText"><span>' + firstMessage + "</span></p>";
+
+  let time = getTime();
+
+  $("#chat-timestamp").append(time);
+  document.getElementById("userInput").scrollIntoView(false);
+}
+
+firstBotMessage();
+
+// Retrieves the response
+function getHardResponse(userText) {
+  let botResponse = getBotResponse(userText);
+  let botHtml = '<p class="botText"><span>' + botResponse + "</span></p>";
+  $("#chatbox").append(botHtml);
+
+  document.getElementById("chat-bar-bottom").scrollIntoView(true);
+}
+
+//Gets the text, text from the input box and processes it
+function getResponse() {
+  let userText = $("#textInput").val();
+
+  if (userText == "") {
+    userText = "🙂";
+  }
+
+  let userHtml = '<p class="userText"><span>' + userText + "</span></p>";
+
+  $("#textInput").val("");
+  $("#chatbox").append(userHtml);
+  document.getElementById("chat-bar-bottom").scrollIntoView(true);
+
+  setTimeout(() => {
+    getHardResponse(userText);
+  }, 1000);
+}
+
+// Handles sending text via button clicks
+function buttonSendText(sampleText) {
+  let userHtml = '<p class="userText"><span>' + sampleText + "</span></p>";
+
+  $("#textInput").val("");
+  $("#chatbox").append(userHtml);
+  document.getElementById("chat-bar-bottom").scrollIntoView(true);
+
+  //Uncomment this if you want the bot to respond to this buttonSendText event
+  setTimeout(() => {
+    getHardResponse(sampleText);
+  }, 1000);
+}
+
+function sendButton() {
+  getResponse();
+}
+
+function heartButton() {
+  buttonSendText("❤️");
+}
+
+// Press enter to send a message
+$("#textInput").keypress(function (e) {
+  if (e.which == 13) {
+    getResponse();
+  }
+});
+
