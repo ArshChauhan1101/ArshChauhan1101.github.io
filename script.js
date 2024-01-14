@@ -193,19 +193,19 @@ let swiperAchievements = new Swiper(".Achievement .swiper-container", {
 });
 
 
-// Swiper initialization for Projects section
-let swiperProjects = new Swiper(".portfolio .swiper-container", {
-  cssMode: true,
-  loop: true,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".portfolio .swiper-pagination",
-    clickable: true,
-  },
-});
+// // Swiper initialization for Projects section
+// let swiperProjects = new Swiper(".portfolio .swiper-container", {
+//   cssMode: true,
+//   loop: true,
+//   autoplay: {
+//     delay: 4000,
+//     disableOnInteraction: false,
+//   },
+//   pagination: {
+//     el: ".portfolio .swiper-pagination",
+//     clickable: true,
+//   },
+// });
 
 
 
@@ -461,6 +461,7 @@ function getHardResponse(userText) {
 }
 
 //Gets the text, text from the input box and processes it
+// Gets the text, text from the input box and processes it
 function getResponse() {
   let userText = $("#textInput").val();
 
@@ -474,10 +475,12 @@ function getResponse() {
   $("#chatbox").append(userHtml);
   document.getElementById("chat-bar-bottom").scrollIntoView(true);
 
+  // Now, you can send the user's input to the bot and receive a response
   setTimeout(() => {
     getHardResponse(userText);
   }, 1000);
 }
+
 
 // Handles sending text via button clicks
 function buttonSendText(sampleText) {
